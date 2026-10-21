@@ -32,6 +32,7 @@
       <nav class="nav" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="projects.html" aria-current="page">Projects</a>
+        <a href="index.html#writing">Writing</a>
         <a href="files/Lauren_Henderson_CV.pdf">CV</a>
         <a href="index.html#contact">Contact</a>
       </nav>
@@ -41,8 +42,23 @@
   <main id="main">
 
     <header class="page-head wrap">
-      <h1>Projects</h1>
-      <p>Work and research, newest first.</p>
+      <div>
+        <h1>Projects</h1>
+        <p>Work and research, newest first.</p>
+      </div>
+
+      <!-- Jump list. When you add a project, add a line here too:
+           the href must match the project's id (href="#my-id" ↔ id="my-id"). -->
+      <nav class="jump" aria-label="Projects on this page">
+        <p class="jump-label mono">Jump to</p>
+        <ol>
+          <li><a href="#nat-geo">Deep-sea species detection</a></li>
+          <li><a href="#persona-vectors">Persona vectors</a></li>
+          <li><a href="#unicef">UNICEF RAG chatbot</a></li>
+          <li><a href="#sourcer">Agentic sourcing tool</a></li>
+          <li><a href="#eutrophication">Eutrophication classifier</a></li>
+        </ol>
+      </nav>
     </header>
 
     <section class="section wrap" aria-label="Project list">
@@ -102,6 +118,7 @@
               <li>Contrastive learning</li>
             </ul>
             <div class="entry-links">
+              <a href="https://medium.com/data-science-society/species-clustering-in-the-benthic-zone-building-a-computer-vision-pipeline-for-national-ff93e1c80ef0">Blog post</a>
               <a href="https://github.com/seanli05/nat-geo">Code</a>
             </div>
           </div>

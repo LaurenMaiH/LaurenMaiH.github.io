@@ -73,6 +73,11 @@ The current file is the one-page LaTeX version. Recompile, rename, re-upload.
    Give it an `id` like `id="spotify-recs"` so you can link straight to it (`projects.html#spotify-recs`).
 3. To feature it on the home page too, copy one of the `<li class="entry">` blocks under **SELECTED WORK** in `index.html` and edit it.
 
+4. Add a line for it to the **Jump to** list at the top of `projects.html` (its `href="#..."` must match the project's `id`).
+
+### Add a piece of writing
+In `index.html`, find **WRITING**, copy one `<li class="post">` block to the top of the list, and change the link, title, one-line description, publication, and date.
+
 ### Change colors or fonts
 Everything is in the **THEME** block at the top of `style.css`.
 - Recolor accents: change `--accent` (planet, button) and `--link`.
