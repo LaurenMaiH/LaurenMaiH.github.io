@@ -47,18 +47,52 @@
         <p>Work and research, newest first.</p>
       </div>
 
-      <!-- Jump list. When you add a project, add a line here too:
-           the href must match the project's id (href="#my-id" ↔ id="my-id"). -->
-      <nav class="jump" aria-label="Projects on this page">
-        <p class="jump-label mono">Jump to</p>
-        <ol>
-          <li><a href="#nat-geo">Deep-sea species detection</a></li>
-          <li><a href="#persona-vectors">Persona vectors</a></li>
-          <li><a href="#unicef">UNICEF RAG chatbot</a></li>
-          <li><a href="#sourcer">Agentic sourcing tool</a></li>
-          <li><a href="#eutrophication">Eutrophication classifier</a></li>
-        </ol>
-      </nav>
+      <!-- Star-cluster graphic: species-clustering embeddings drawn as a night sky.
+           Decorative, so screen readers skip it. Colors come from style.css (.clusters rules). -->
+      <div class="page-art" aria-hidden="true">
+        <svg class="clusters" viewBox="30 14 262 172" xmlns="http://www.w3.org/2000/svg">
+          <!-- faint background stars -->
+          <circle class="field" cx="105.7" cy="34.4" r="0.9"/><circle class="field" cx="28.3" cy="106.7" r="0.8"/>
+          <circle class="field" cx="23.9" cy="101.4" r="0.6"/><circle class="field" cx="139.6" cy="19.1" r="0.6"/>
+          <circle class="field" cx="136.8" cy="161.4" r="0.7"/><circle class="field" cx="74.8" cy="124" r="1.1"/>
+          <circle class="field" cx="183.7" cy="80.6" r="1.1"/><circle class="field" cx="20.3" cy="167.4" r="0.7"/>
+          <circle class="field" cx="50.4" cy="28.1" r="0.8"/><circle class="field" cx="257.4" cy="40" r="0.9"/>
+          <circle class="field" cx="268" cy="118" r="0.9"/><circle class="field" cx="25.3" cy="17.2" r="0.7"/>
+          <circle class="field" cx="250.7" cy="137.4" r="0.7"/><circle class="field" cx="182.9" cy="104.7" r="1"/>
+          <circle class="field" cx="42.4" cy="84.6" r="1"/><circle class="field" cx="52.8" cy="97.9" r="0.6"/>
+          <circle class="field" cx="211.8" cy="169.7" r="0.9"/><circle class="field" cx="285.6" cy="95" r="0.9"/>
+          <circle class="field" cx="264.7" cy="183.6" r="0.8"/><circle class="field" cx="300.6" cy="17.4" r="1"/>
+          <circle class="field" cx="115.3" cy="192.7" r="1"/><circle class="field" cx="305" cy="150" r="0.8"/>
+
+          <!-- cluster 1 -->
+          <circle class="c1" cx="108.5" cy="71.9" r="4.5"/><circle class="c1" cx="95.7" cy="75.2" r="1.8"/>
+          <circle class="c1" cx="92.9" cy="63.7" r="2.2"/><circle class="c1" cx="68.5" cy="85.4" r="1.8"/>
+          <circle class="c1" cx="74" cy="74.8" r="3.6"/><circle class="c1" cx="104.6" cy="48.3" r="2.2"/>
+          <circle class="c1" cx="82" cy="78.7" r="2.0"/><circle class="c1" cx="100.3" cy="68.2" r="2.1"/>
+          <circle class="c1" cx="93.2" cy="78.7" r="2.8"/><circle class="c1" cx="82.1" cy="65" r="1.7"/>
+          <circle class="c1" cx="114" cy="64.7" r="2.8"/><circle class="c1" cx="75.3" cy="57.9" r="1.8"/>
+          <circle class="c1" cx="113.1" cy="57.7" r="3.6"/><circle class="c1" cx="96.4" cy="58.6" r="2.5"/>
+
+          <!-- cluster 2 (circled, like a reviewed cluster) -->
+          <circle class="boundary" cx="226" cy="60" r="26"/>
+          <circle class="c2" cx="236.7" cy="66.9" r="4.5"/><circle class="c2" cx="226.5" cy="59.5" r="2.1"/>
+          <circle class="c2" cx="228.2" cy="66.1" r="1.8"/><circle class="c2" cx="229.4" cy="52" r="2.0"/>
+          <circle class="c2" cx="220.1" cy="59.8" r="3.6"/><circle class="c2" cx="216.4" cy="54.1" r="2.2"/>
+          <circle class="c2" cx="214.9" cy="66.1" r="2.0"/><circle class="c2" cx="216.4" cy="70.8" r="3.5"/>
+          <circle class="c2" cx="223.5" cy="48.9" r="3.8"/><circle class="c2" cx="237.7" cy="55.2" r="3.9"/>
+          <circle class="c2" cx="208.8" cy="59" r="1.8"/><circle class="c2" cx="230" cy="74" r="2.2"/>
+          <text class="label" x="226" y="102" text-anchor="middle">species 07</text>
+
+          <!-- cluster 3 -->
+          <circle class="c3" cx="184.1" cy="131" r="4.5"/><circle class="c3" cx="166.9" cy="158.2" r="2.1"/>
+          <circle class="c3" cx="170.7" cy="130.4" r="3.4"/><circle class="c3" cx="162.5" cy="154" r="3.5"/>
+          <circle class="c3" cx="199.2" cy="143.6" r="3.5"/><circle class="c3" cx="178.9" cy="126.9" r="2.2"/>
+          <circle class="c3" cx="153.1" cy="144.7" r="1.7"/><circle class="c3" cx="180.8" cy="147.8" r="2.2"/>
+          <circle class="c3" cx="155.8" cy="122" r="2.7"/><circle class="c3" cx="207.9" cy="133.3" r="3.8"/>
+          <circle class="c3" cx="171.6" cy="154.2" r="3.1"/><circle class="c3" cx="192.8" cy="131.6" r="2.8"/>
+          <circle class="c3" cx="151.6" cy="130.2" r="1.8"/>
+        </svg>
+      </div>
     </header>
 
     <section class="section wrap" aria-label="Project list">
