@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Projects · Lauren Henderson</title>
+  <meta name="description" content="Projects by Lauren Henderson: deep-sea species detection, persona vectors research, a RAG chatbot for UNICEF, and more.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects · Lauren Henderson">
+  <meta property="og:description" content="Machine learning for scientific discovery. Data science at UC Berkeley.">
+  <meta property="og:url" content="https://laurenmaih.github.io/projects.html">
+  <meta property="og:image" content="https://laurenmaih.github.io/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER (same on every page) ============ -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Lauren Henderson</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="files/Lauren_Henderson_CV.pdf">CV</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <header class="page-head wrap">
+      <h1>Projects</h1>
+      <p>Work and research, newest first.</p>
+    </header>
+
+    <section class="section wrap" aria-label="Project list">
+      <ul class="entries">
+
+        <!-- =========================================================
+             HOW TO ADD A PROJECT
+             Copy this template, paste it where you want it in the
+             list (newest at the top), and fill it in. Delete any
+             line you don't need (no dates? remove that <span>).
+
+        <li class="entry" id="short-name-for-linking">
+          <div class="entry-meta">
+            <span class="entry-org">Organization or "Project"</span>
+            <span class="entry-role">Your role</span>
+            <span class="mono">Month Year – Month Year</span>
+          </div>
+          <div>
+            <h3>Project title</h3>
+            <p>One or two sentences: what it is and why it matters.</p>
+            <ul>
+              <li>Something you did</li>
+              <li>Another thing you did</li>
+            </ul>
+            <ul class="stack mono">
+              <li>Python</li>
+              <li>PyTorch</li>
+            </ul>
+            <div class="entry-links">
+              <a href="https://github.com/...">Code</a>
+              <a href="https://...">Write-up</a>
+            </div>
+          </div>
+        </li>
+             ========================================================= -->
+
+
+        <!-- National Geographic -->
+        <li class="entry" id="nat-geo">
+          <div class="entry-meta">
+            <span class="entry-org">National Geographic</span>
+            <span class="entry-role">ML Engineer, now Technical Project Manager</span>
+            <span class="mono">Feb 2026 – present</span>
+          </div>
+          <div>
+            <h3>Finding species in deep-sea footage</h3>
+            <p>Annotating biodiversity in deep-sea video used to take more than four months by hand. I designed and evaluated a multi-stage pipeline that detects, tracks, and clusters marine species automatically, bringing that down to 1–2 days.</p>
+            <ul>
+              <li>Fine-tuned BioCLIP-2 across 36 configurations with a custom supervised contrastive loss for fine-grained species differences, and built eval metrics that took cluster integrity from about 60% to 96%.</li>
+              <li>Built preprocessing (median blur, CLAHE, background gating) and paired YOLO-World with ByteTrack tracking, detecting individual animals without pre-labeled data at 100% recall on validation footage.</li>
+              <li>Promoted this fall to technical project manager to lead the project's second phase: overseeing a new supervised learning layer, and guiding National Geographic's team as they integrate the tool and build a data pipeline for deep-sea exploration footage.</li>
+            </ul>
+            <ul class="stack mono">
+              <li>BioCLIP-2</li>
+              <li>YOLO-World</li>
+              <li>ByteTrack</li>
+              <li>Contrastive learning</li>
+            </ul>
+            <div class="entry-links">
+              <a href="https://github.com/seanli05/nat-geo">Code</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Persona vectors -->
+        <li class="entry" id="persona-vectors">
+          <div class="entry-meta">
+            <span class="entry-org">Independent research</span>
+            <span class="entry-role">Interpretability</span>
+          </div>
+          <div>
+            <h3>Are persona vectors language-invariant?</h3>
+            <p>Anthropic's persona vectors research found directions in a model's activations that correspond to character traits. I asked whether those directions are the same across languages.</p>
+            <ul>
+              <li>Extracted vectors for three traits (evil, sycophancy, hallucination) in English and Spanish on Qwen2.5-3B-Instruct and found 0.84–0.92 cross-language cosine similarity, against a 0.45 ceiling between different traits.</li>
+              <li>Validated with an LLM-judged steering evaluation (200 responses per condition). Vectors from the other language suppressed traits as well as same-language vectors did, cutting hallucination by up to 49% without target-language extraction data.</li>
+            </ul>
+            <ul class="stack mono">
+              <li>Qwen2.5-3B-Instruct</li>
+              <li>Activation steering</li>
+              <li>nnsight</li>
+              <li>LLM-as-judge eval</li>
+            </ul>
+            <div class="entry-links">
+              <a href="https://docs.google.com/document/d/e/2PACX-1vQaG10gEyraIGVt2Kj4s3BUQMbuP7l8yhpGz8kr6k1eJNKP3SfmWTX93_Oq9KEjcfGSx9VqyDfWopQo/pub">Write-up</a>
+              <a href="https://github.com/LaurenMaiH/persona_vectors_language_variance">Code</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- UNICEF -->
+        <li class="entry" id="unicef">
+          <div class="entry-meta">
+            <span class="entry-org">UNICEF</span>
+            <span class="entry-role">Data Science Consultant</span>
+            <span class="mono">Sep – Dec 2025</span>
+          </div>
+          <div>
+            <h3>A RAG chatbot built for young users</h3>
+            <p>A full-stack chatbot that adapts UNICEF reports for four audiences: children, researchers, policymakers, and humanitarian practitioners. Because some of those users are young or vulnerable, safety was part of the design from the start.</p>
+            <ul>
+              <li>Built a 4-stage retrieval pipeline with persona-based prompting for each audience.</li>
+              <li>Identified and documented four recurring failure modes (persona drift, over-complex language, intent injection, and hallucinations in long-context queries) to guide model improvements.</li>
+              <li>Designed guardrails to keep responses age-appropriate, accurate, and non-harmful.</li>
+            </ul>
+            <ul class="stack mono">
+              <li>LangChain</li>
+              <li>ChromaDB</li>
+              <li>Streamlit</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Agentic sourcer -->
+        <li class="entry" id="sourcer">
+          <div class="entry-meta">
+            <span class="entry-org">Data Science Society</span>
+            <span class="entry-role">Internal tool</span>
+          </div>
+          <div>
+            <h3>Agentic sourcing tool</h3>
+            <p>A sourcing and enrichment tool on the Apollo.io API that DSS uses for cross-committee recruiting and outreach. It filters contacts by company, role, seniority, and industry across multiple personas, and verifies emails automatically to cut manual follow-up.</p>
+            <ul class="stack mono">
+              <li>Python</li>
+              <li>Apollo.io API</li>
+              <li>Streamlit</li>
+            </ul>
+            <div class="entry-links">
+              <a href="https://github.com/LuisF1238/Apollo-Agent-v0.5">Code</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Eutrophication classifier -->
+        <li class="entry" id="eutrophication">
+          <div class="entry-meta">
+            <span class="entry-org">Hackathon</span>
+            <span class="entry-role">First ML project</span>
+            <span class="mono">2023</span>
+          </div>
+          <div>
+            <h3>Eutrophication classifier</h3>
+            <p>Built over a weekend: a web app that looks at a photo of water and predicts whether it looks eutrophic. My first time taking a model all the way to something people could use.</p>
+            <ul class="stack mono">
+              <li>fastai</li>
+              <li>PyTorch</li>
+              <li>Flask</li>
+            </ul>
+            <div class="entry-links">
+              <a href="https://github.com/LaurenMaiH/eutrophication_classifier">Code</a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER (same on every page) ============ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="mono">© 2026 Lauren Henderson</span>
+      <span class="mono">Plain HTML and CSS, hosted on GitHub Pages</span>
+    </div>
+  </footer>
+</body>
+</html>

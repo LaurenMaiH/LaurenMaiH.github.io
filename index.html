@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- EDIT: browser tab title and the description search engines show -->
+  <title>Lauren Henderson</title>
+  <meta name="description" content="Lauren Henderson studies data science at UC Berkeley and builds machine learning for scientific discovery.">
+
+  <!-- Link previews (Slack, iMessage, email, LinkedIn).
+       If your site URL isn't laurenmaih.github.io, update the two URLs below. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lauren Henderson">
+  <meta property="og:description" content="Machine learning for scientific discovery. Data science at UC Berkeley.">
+  <meta property="og:url" content="https://laurenmaih.github.io/">
+  <meta property="og:image" content="https://laurenmaih.github.io/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts. To change fonts, swap these and the --font-* lines in style.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER (same on every page) ============ -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Lauren Henderson</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="files/Lauren_Henderson_CV.pdf">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero wrap" aria-labelledby="name">
+      <div>
+        <p class="mono hero-meta"><span>Berkeley, CA</span><span>37.87° N, 122.27° W</span></p>
+
+        <h1 id="name">Lauren Henderson</h1>
+
+        <!-- EDIT: one-line tagline -->
+        <p class="tagline">Machine learning for scientific discovery.</p>
+
+        <!-- EDIT: short bio -->
+        <div class="bio">
+          <p>I study data science at UC Berkeley and build ML systems that help scientists see more in their data. Lately that means finding and telling apart marine species in deep-sea footage with National Geographic.</p>
+          <p>I also love space. Astro C10 turned that into a direction, and I'd like to point these tools at the sky next.</p>
+        </div>
+
+        <ul class="hero-links">
+          <li><a class="button" href="files/Lauren_Henderson_CV.pdf">Download CV (PDF)</a></li>
+          <li><a href="https://github.com/LaurenMaiH">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/lauren-henderson-b259a431b/">LinkedIn</a></li>
+          <li><a href="mailto:lauren_henderson@berkeley.edu">Email</a></li>
+        </ul>
+      </div>
+
+      <!-- Orbit illustration. Decorative, so screen readers skip it.
+           Colors come from style.css (.orbit rules). -->
+      <div class="hero-art" aria-hidden="true">
+        <svg class="orbit" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+          <circle class="star" cx="22"  cy="34"  r="1.2"/>
+          <circle class="star" cx="210" cy="28"  r="1"/>
+          <circle class="star" cx="226" cy="168" r="1.4"/>
+          <circle class="star" cx="16"  cy="200" r="1"/>
+          <circle class="star" cx="168" cy="226" r="1.1"/>
+
+          <circle class="ring" cx="120" cy="120" r="64"/>
+          <circle class="ring" cx="120" cy="120" r="102"/>
+
+          <circle class="planet" cx="120" cy="120" r="28"/>
+          <ellipse class="planet-ring" cx="120" cy="120" rx="44" ry="9" transform="rotate(-18 120 120)"/>
+
+          <g class="path-1"><circle class="moon" cx="184" cy="120" r="6"/></g>
+          <g class="path-2"><circle class="moon-2" cx="120" cy="18" r="4"/></g>
+        </svg>
+      </div>
+    </section>
+
+
+    <!-- ============ SELECTED WORK ============
+         Short versions. Full details live on projects.html.
+         To add one: copy an <li class="entry"> ... </li> block. -->
+    <section class="section wrap" aria-labelledby="work">
+      <div class="section-head">
+        <h2 id="work">Selected work</h2>
+        <a href="projects.html">All projects</a>
+      </div>
+
+      <ul class="entries">
+
+        <!-- National Geographic -->
+        <li class="entry">
+          <div class="entry-meta">
+            <span class="entry-org">National Geographic</span>
+            <span class="entry-role">ML Engineer, now Technical Project Manager</span>
+            <span class="mono">Feb 2026 – present</span>
+          </div>
+          <div>
+            <h3>Finding species in deep-sea footage</h3>
+            <p>A multi-stage pipeline that detects, tracks, and clusters marine species in deep-sea video, cutting manual biodiversity annotation from 4+ months to 1–2 days. I built it as an ML engineer, and this fall I was promoted to lead the project's second phase: adding a supervised learning layer and helping National Geographic's team integrate the tool into their deep-sea exploration pipeline.</p>
+            <div class="entry-links">
+              <a href="https://github.com/seanli05/nat-geo">Code</a>
+              <a href="projects.html#nat-geo">Details</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Persona vectors -->
+        <li class="entry">
+          <div class="entry-meta">
+            <span class="entry-org">Independent research</span>
+            <span class="entry-role">Interpretability</span>
+          </div>
+          <div>
+            <h3>Are persona vectors language-invariant?</h3>
+            <p>I extended Anthropic's persona vectors work to English and Spanish on Qwen2.5-3B-Instruct. Vectors for evil, sycophancy, and hallucination lined up across languages (0.84–0.92 cosine similarity, against a 0.45 cross-trait ceiling), and steering with a vector from the other language cut hallucination by up to 49%.</p>
+            <div class="entry-links">
+              <a href="https://docs.google.com/document/d/e/2PACX-1vQaG10gEyraIGVt2Kj4s3BUQMbuP7l8yhpGz8kr6k1eJNKP3SfmWTX93_Oq9KEjcfGSx9VqyDfWopQo/pub">Write-up</a>
+              <a href="https://github.com/LaurenMaiH/persona_vectors_language_variance">Code</a>
+              <a href="projects.html#persona-vectors">Details</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- UNICEF -->
+        <li class="entry">
+          <div class="entry-meta">
+            <span class="entry-org">UNICEF</span>
+            <span class="entry-role">Data Science Consultant</span>
+            <span class="mono">Sep – Dec 2025</span>
+          </div>
+          <div>
+            <h3>A RAG chatbot built for young users</h3>
+            <p>A retrieval-augmented chatbot that adapts UNICEF reports for children, researchers, policymakers, and humanitarian practitioners, with safety guardrails designed for young and vulnerable users.</p>
+            <div class="entry-links">
+              <a href="projects.html#unicef">Details</a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+
+    <!-- ============ ELSEWHERE ============ -->
+    <section class="section wrap" aria-labelledby="elsewhere">
+      <div class="section-head">
+        <h2 id="elsewhere">Elsewhere</h2>
+      </div>
+      <div class="split">
+        <div>
+          <h3>Data Science Society at Berkeley</h3>
+          <p>As VP of Client Relations, I lead our largest committee (20+ sourcers) and run client work end to end, from cold outreach to scoping and pricing. We've closed engagements with Snowflake, Broadcom, National Geographic, WWF, and PG&amp;E, bringing in $130,000+ in project funding.</p>
+        </div>
+        <div>
+          <!-- EDIT: interests -->
+          <h3>Off the clock</h3>
+          <p>Formula 1, math rock guitar, modding keyboards, and outdoor bouldering. Also coffee, books, hiking, and The Good Place.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section wrap" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="section-title">Get in touch</h2>
+      <!-- EDIT: what you're looking for -->
+      <p class="contact-note">I'm looking for summer 2027 internships in machine learning, especially for science and space. Email is the fastest way to reach me.</p>
+      <ul class="contact-list">
+        <li><span class="mono">Email</span><a href="mailto:lauren_henderson@berkeley.edu">lauren_henderson@berkeley.edu</a></li>
+        <li><span class="mono">GitHub</span><a href="https://github.com/LaurenMaiH">github.com/LaurenMaiH</a></li>
+        <li><span class="mono">LinkedIn</span><a href="https://www.linkedin.com/in/lauren-henderson-b259a431b/">linkedin.com/in/lauren-henderson-b259a431b</a></li>
+        <li><span class="mono">CV</span><a href="files/Lauren_Henderson_CV.pdf">Lauren_Henderson_CV.pdf</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER (same on every page) ============ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="mono">© 2026 Lauren Henderson</span>
+      <span class="mono">Plain HTML and CSS, hosted on GitHub Pages</span>
+    </div>
+  </footer>
+</body>
+</html>
