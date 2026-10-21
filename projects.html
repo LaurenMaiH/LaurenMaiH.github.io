@@ -141,8 +141,9 @@
             <h3>Finding species in deep-sea footage</h3>
             <p>Annotating biodiversity in deep-sea video used to take more than four months by hand. I designed and evaluated a multi-stage pipeline that detects, tracks, and clusters marine species automatically, bringing that down to 1–2 days.</p>
             <ul>
+              <li>Built preprocessing (median blur, CLAHE, background gating) and YOLO-World + ByteTrack detection, cutting runtime by up to 86% and reaching 100% recall on individual animals without labeled data.</li>
               <li>Fine-tuned BioCLIP-2 across 36 configurations with a custom supervised contrastive loss for fine-grained species differences, and built eval metrics that took cluster integrity from about 60% to 96%.</li>
-              <li>Built preprocessing (median blur, CLAHE, background gating) and paired YOLO-World with ByteTrack tracking, detecting individual animals without pre-labeled data at 100% recall on validation footage.</li>
+              <li>Built the clustering stage: HDBSCAN over the fine-tuned embeddings, so there's no preset species count and rare species stay isolated as outliers, plus an adaptive human-in-the-loop scheme that grows clusters video by video. This keeps different species from merging into megaclusters across ~240 videos per mission.</li>
               <li>Promoted this fall to technical project manager to lead the project's second phase: overseeing a new supervised learning layer, and guiding National Geographic's team as they integrate the tool and build a data pipeline for deep-sea exploration footage.</li>
             </ul>
             <ul class="stack mono">
@@ -150,6 +151,7 @@
               <li>YOLO-World</li>
               <li>ByteTrack</li>
               <li>Contrastive learning</li>
+              <li>HDBSCAN</li>
             </ul>
             <div class="entry-links">
               <a href="https://medium.com/data-science-society/species-clustering-in-the-benthic-zone-building-a-computer-vision-pipeline-for-national-ff93e1c80ef0">Blog post</a>
@@ -178,7 +180,7 @@
               <li>LLM-as-judge eval</li>
             </ul>
             <div class="entry-links">
-              <a href="writing/persona-vectors.html">Write-up</a>
+              <a href="persona-vectors.html">Write-up</a>
               <a href="https://github.com/LaurenMaiH/persona_vectors_language_variance">Code</a>
             </div>
           </div>
@@ -188,7 +190,7 @@
         <li class="entry" id="unicef">
           <div class="entry-meta">
             <span class="entry-org">UNICEF</span>
-            <span class="entry-role">Data Science Consultant</span>
+            <span class="entry-role">Data Scientist</span>
             <span class="mono">Sep – Dec 2025</span>
           </div>
           <div>
