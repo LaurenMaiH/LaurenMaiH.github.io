@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Projects · Lauren Henderson</title>
-  <meta name="description" content="Projects by Lauren Henderson: deep-sea species detection, persona vectors research, a RAG chatbot for UNICEF, and more.">
+  <meta name="description" content="Projects by Lauren Henderson: deep-sea species detection, persona vectors research, a multilingual WhatsApp agent for immigrant families, and more.">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Projects · Lauren Henderson">
@@ -14,7 +14,7 @@
   <meta property="og:image" content="https://laurenmaih.github.io/og.png">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml"> <!-- bump ?v= when you change the favicon so browsers fetch the new one -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
     <header class="page-head wrap">
       <div>
         <h1>Projects</h1>
-        <p>Work and research, newest first.</p>
+        <p>lots of whimsy, lots of fun</p>
       </div>
 
       <!-- Star-cluster graphic: species-clustering embeddings drawn as a night sky.
@@ -129,6 +129,37 @@
         </li>
              ========================================================= -->
 
+
+        <!-- Avocado (Cal Hacks) -->
+        <li class="entry" id="avocado">
+          <div class="entry-meta">
+            <span class="entry-org">Cal Hacks 13.0</span>
+            <span class="entry-role">Conversation, translation, and memory</span>
+            <span class="mono">Oct 2026</span>
+          </div>
+          <div>
+            <h3>Avocado: an advocate in any language</h3>
+            <p>Immigration letters are high-stakes and hard to read in a second language. Over a weekend, our team of four built Avocado, a WhatsApp agent for immigrant families: send a photo of a USCIS notice and it explains the letter in your language, checks that it's genuine, and, with your consent, calls the agency and waits on hold for you.</p>
+            <ul>
+              <li>Built the WhatsApp conversation: the agent explains the letter, reports whether it's genuine, and offers a call only when the user actually needs one. Nothing is dialed without an explicit yes.</li>
+              <li>Grounded translation in a glossary of official immigration terms in Spanish, Dari, Nepali, Pashto, Russian, Vietnamese, and Arabic, and took Dari end to end, from WhatsApp replies to a right-to-left dashboard.</li>
+              <li>Built the memory writer, which asks before saving sensitive facts like immigration status, income, or health.</li>
+            </ul>
+            <ul class="stack mono">
+              <li>Claude</li>
+              <li>FastAPI</li>
+              <li>PostgreSQL</li>
+              <li>Twilio</li>
+              <li>WhatsApp</li>
+              <li>Cartesia</li>
+              <li>Next.js</li>
+            </ul>
+            <div class="entry-links">
+              <a href="https://devpost.com/software/avocado-an-advocate-in-any-language">Devpost and demo video</a>
+              <a href="https://github.com/seanli05/calhacks">Code</a>
+            </div>
+          </div>
+        </li>
 
         <!-- National Geographic -->
         <li class="entry" id="nat-geo">
